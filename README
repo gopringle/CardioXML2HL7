@@ -1,0 +1,20 @@
+CardioXML2HL7
+
+
+Introduction
+------------
+Sample code using the Ruby-HL7 module to parse Resting EKG XML files from GEHC CardioSoft/MAC carts to generate HL7 ORU messages.
+This tool was used as a proof of concept but it can be easily adapted to suit your needs.
+
+Included are two sample XML files with dummy data.
+
+=> Usage: ruby cardio_XML_HL7.rb InputFile.xml
+
+
+NOTE: 
+To send HL7 messages to your integration engine open the file
+and change the IP Address and the Port number.
+
+#To send message via TCP/IP
+soc = TCPSocket.open( "192.XXX.X.XXX", 6661 ) 
+
